@@ -20,7 +20,7 @@ body {
 
     font-family: var(--font-family-base);
     font-size: var(--font-size-base);
-    line-height: 1.5;
+    line-height: 1.6;
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -34,6 +34,7 @@ select {
 }
 
 button {
+    color: inherit;
     cursor: pointer;
 }
 
@@ -52,8 +53,8 @@ svg {
 }
 
 ::selection {
-    background-color: var(--color-accent);
-    color: #ffffff;
+    background-color: var(--color-accent-soft);
+    color: var(--color-text-primary);
 }
 
 :focus-visible {
