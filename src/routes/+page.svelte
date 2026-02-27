@@ -98,8 +98,38 @@
         </section>
     </section>
 
-    <section id="about" class="section">
-        <h2>{content.sections.about}</h2>
+    <section id="about" class="about section" aria-labelledby="about-title">
+        <section class="about__heading">
+            <span class="about__index">{content.about.index}</span>
+
+            <h2 id="about-title">
+                {content.about.title}
+            </h2>
+
+            <span class="about__decoration" aria-hidden="true">✳</span>
+        </section>
+
+        <section class="about__body">
+            <p class="about__description">
+                {content.about.description}
+            </p>
+
+            <ul class="about__details">
+                {#each content.about.details as detail, index (detail)}
+                    <li>
+                        <span class="about__detail-index">
+                            0{index + 1}
+                        </span>
+                        <span>{detail}</span>
+                    </li>
+                {/each}
+            </ul>
+
+            <p class="about__note">
+                <span aria-hidden="true">“</span>
+                {content.about.note}
+            </p>
+        </section>
     </section>
 
     <section id="stack" class="section">
