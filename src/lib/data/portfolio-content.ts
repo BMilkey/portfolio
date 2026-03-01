@@ -32,6 +32,30 @@ export const portfolioContent = {
             ],
             note: 'Curiosity turns complexity into something understandable.'
         },
+        stack: {
+            index: '03 / TOOLKIT',
+            title: 'Tools I work with.',
+            description:
+                'A combination of technologies for building reliable interfaces, handling real-time data and exploring interactive experiences.',
+            groups: [
+                {
+                    title: 'Frontend Engineering',
+                    description: 'Application development',
+                    technologies: ['Angular', 'TypeScript', 'JavaScript', 'RxJS', 'SCSS']
+                },
+                {
+                    title: 'Real-time & Media',
+                    description: 'Communication and data processing',
+                    technologies: ['WebRTC', 'WebSocket', 'REST API', 'Electron', 'OpenLayers']
+                },
+                {
+                    title: 'Creative Development',
+                    description: 'Interactive web experiences',
+                    technologies: ['Svelte 5', 'Three.js', 'Vite', 'Tailwind CSS']
+                }
+            ],
+            note: 'Always learning. Always building.'
+        },
         sections: {
             about: 'About',
             stack: 'Tech Stack',
@@ -69,6 +93,30 @@ export const portfolioContent = {
                 'Самостоятельное проектирование и развитие frontend-архитектуры'
             ],
             note: 'Любопытство помогает превращать сложное в понятное.'
+        },
+        stack: {
+            index: '03 / ИНСТРУМЕНТЫ',
+            title: 'Технологии в работе.',
+            description:
+                'Набор инструментов для создания надёжных интерфейсов, обработки данных в реальном времени и разработки интерактивных проектов.',
+            groups: [
+                {
+                    title: 'Frontend-разработка',
+                    description: 'Разработка приложений',
+                    technologies: ['Angular', 'TypeScript', 'JavaScript', 'RxJS', 'SCSS']
+                },
+                {
+                    title: 'Real-time и медиа',
+                    description: 'Коммуникация и обработка данных',
+                    technologies: ['WebRTC', 'WebSocket', 'REST API', 'Electron', 'OpenLayers']
+                },
+                {
+                    title: 'Creative Development',
+                    description: 'Интерактивные веб-проекты',
+                    technologies: ['Svelte 5', 'Three.js', 'Vite', 'Tailwind CSS']
+                }
+            ],
+            note: 'Постоянно изучаю новое и создаю.'
         },
         sections: {
             about: 'Обо мне',
