@@ -1,0 +1,317 @@
+.hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  min-height: min(760px, calc(100svh - 88px));
+  padding-block: var(--spacing-16) calc(var(--spacing-24) + var(--spacing-8));
+
+  &__content {
+    position: relative;
+    z-index: 2;
+    max-width: 650px;
+  }
+
+  &__eyebrow {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--spacing-3);
+    margin-bottom: var(--spacing-8);
+    color: var(--color-text-secondary);
+    font-family: var(--font-family-mono);
+    font-size: var(--font-size-xs);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  &__status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #91b99b;
+    box-shadow: 0 0 0 4px rgb(145 185 155 / 15%);
+  }
+
+  &__index {
+    color: var(--color-text-muted);
+  }
+
+  h1 {
+    position: relative;
+    margin: 0;
+    font-size: clamp(3.5rem, 7vw, 6.5rem);
+    font-weight: 700;
+    letter-spacing: -0.085em;
+    line-height: 0.98;
+  }
+
+  &__title-accent {
+    display: block;
+    width: fit-content;
+    margin-top: 0.12em;
+    color: var(--color-accent);
+  }
+
+  &__title-sparkle {
+    position: absolute;
+    top: 0.05em;
+    right: 0.1em;
+    color: var(--color-accent-strong);
+    font-size: 0.35em;
+    animation: sparkle-rotate 12s linear infinite;
+  }
+
+  &__description {
+    max-width: 430px;
+    margin: var(--spacing-8) 0 0;
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-lg);
+    line-height: 1.75;
+  }
+
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-6);
+    margin-top: var(--spacing-8);
+    padding-bottom: var(--spacing-2);
+    border-bottom: 1px solid var(--color-accent);
+    color: var(--color-accent-strong);
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    transition:
+            gap var(--transition-base),
+            color var(--transition-fast);
+
+    &:hover {
+      gap: var(--spacing-8);
+      color: var(--color-text-primary);
+    }
+  }
+
+  &__visual {
+    position: relative;
+    display: grid;
+    place-items: center;
+    min-width: 0;
+    min-height: 480px;
+    isolation: isolate;
+
+    &::before {
+      position: absolute;
+      z-index: -1;
+      width: min(90%, 420px);
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background: var(--color-surface-pink);
+      content: '';
+      filter: blur(1px);
+    }
+
+    &::after {
+      position: absolute;
+      z-index: -1;
+      top: 15%;
+      right: 7%;
+      width: 100px;
+      aspect-ratio: 1;
+      border: 1px solid var(--color-border-strong);
+      border-radius: 50%;
+      content: '';
+    }
+  }
+
+  &__visual-coordinate {
+    position: absolute;
+    color: var(--color-text-muted);
+    font-family: var(--font-family-mono);
+    font-size: 0.625rem;
+    letter-spacing: 0.06em;
+
+    &--top {
+      top: 5%;
+      right: 0;
+    }
+
+    &--bottom {
+      bottom: 5%;
+      left: 0;
+    }
+  }
+
+  &__object {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: min(78%, 340px);
+    aspect-ratio: 0.72;
+    overflow: hidden;
+    padding: var(--spacing-6);
+    border: 1px solid rgb(255 255 255 / 80%);
+    border-radius: 28px;
+    background: linear-gradient(
+            145deg,
+            rgb(255 255 255 / 85%),
+            rgb(242 184 202 / 55%) 48%,
+            rgb(233 228 245 / 80%)
+    );
+    box-shadow:
+            0 24px 70px rgb(169 95 128 / 15%),
+            inset 0 0 30px rgb(255 255 255 / 65%);
+    transform: rotate(7deg);
+    transition: transform var(--transition-smooth);
+
+    &:hover {
+      transform: rotate(2deg) translateY(-8px);
+    }
+  }
+
+  &__object-shine {
+    position: absolute;
+    top: -40%;
+    left: -30%;
+    width: 80%;
+    height: 180%;
+    background: linear-gradient(90deg, transparent, rgb(255 255 255 / 65%), transparent);
+    transform: rotate(35deg);
+    pointer-events: none;
+  }
+
+  &__object-header,
+  &__object-footer {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    gap: var(--spacing-2);
+    color: var(--color-accent-strong);
+    font-family: var(--font-family-mono);
+    font-size: 0.55rem;
+    letter-spacing: 0.04em;
+  }
+
+  &__object-symbol {
+    position: relative;
+    align-self: center;
+    color: #fff;
+    font-size: clamp(5rem, 12vw, 9rem);
+    line-height: 1;
+    text-shadow: 0 8px 30px rgb(169 95 128 / 20%);
+  }
+
+  &__sticker {
+    position: absolute;
+    right: 0;
+    bottom: 18%;
+    display: grid;
+    place-items: center;
+    width: 92px;
+    aspect-ratio: 1;
+    border: 1px solid rgb(255 255 255 / 80%);
+    border-radius: 50%;
+    background: var(--color-surface-lavender);
+    color: var(--color-text-primary);
+    font-size: var(--font-size-xs);
+    font-weight: 600;
+    line-height: 1.2;
+    text-align: center;
+    transform: rotate(12deg);
+    box-shadow: var(--shadow-card);
+  }
+  &__bottom {
+    position: absolute;
+    right: 0;
+    bottom: var(--spacing-8);
+    left: 0;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-4);
+    color: var(--color-text-muted);
+    font-family: var(--font-family-mono);
+    font-size: 0.625rem;
+    letter-spacing: 0.06em;
+  }
+
+  &__bottom-line {
+    width: 64px;
+    height: 1px;
+    background: var(--color-border-strong);
+  }
+}
+
+@keyframes sparkle-rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr 0.8fr;
+    gap: var(--spacing-4);
+
+    h1 {
+      font-size: clamp(3rem, 7vw, 5rem);
+    }
+
+    &__visual {
+      min-height: 380px;
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 0;
+    min-height: auto;
+    padding-block: var(--spacing-16) calc(var(--spacing-24) + var(--spacing-8));
+
+    &__content {
+      max-width: 100%;
+    }
+
+    h1 {
+      font-size: clamp(3.4rem, 14vw, 5.5rem);
+    }
+
+    &__title-sparkle {
+      right: 0.2em;
+    }
+
+    &__description {
+      max-width: 360px;
+      font-size: var(--font-size-base);
+    }
+
+    &__visual {
+      min-height: 390px;
+      margin-top: var(--spacing-4);
+    }
+
+    &__object {
+      width: min(65%, 280px);
+    }
+
+    &__sticker {
+      right: 5%;
+      bottom: 15%;
+      width: 78px;
+    }
+
+    &__bottom {
+      bottom: var(--spacing-4);
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__title-sparkle {
+    animation: none;
+  }
+
+  .hero__object {
+    transition: none;
+  }
+}
