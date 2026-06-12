@@ -40,5 +40,17 @@ export default defineConfig(
         }
     },
 
+    {
+        files: ['**/*.svelte'],
+        rules: {
+            'svelte/no-navigation-without-resolve': [
+                'error',
+                {
+                    ignoreLinks: true
+                }
+            ]
+        }
+    },
+
     eslintConfigPrettier
 );

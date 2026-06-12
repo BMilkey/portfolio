@@ -125,6 +125,39 @@ export const portfolioContent = {
             ],
             disclaimer: 'Project descriptions are generalized due to confidentiality.'
         },
+        contacts: {
+            index: '05 / GET IN TOUCH',
+            title: 'Let’s build something meaningful.',
+            description:
+                'Have an interesting project, a challenging problem or an opportunity to collaborate? I would be happy to hear from you.',
+            availability: 'Open to frontend opportunities',
+            links: [
+                {
+                    label: 'GitHub',
+                    value: 'github.com/BMilkey',
+                    href: 'https://github.com/BMilkey',
+                    external: true
+                },
+                {
+                    label: 'Telegram',
+                    value: '@bmilkey',
+                    href: 'https://t.me/bmilkey',
+                    external: true
+                },
+                {
+                    label: 'Email',
+                    value: 'sochioneface@gmail.com',
+                    href: 'mailto:sochioneface@gmail.com',
+                    external: false
+                }
+            ],
+            note: 'Usually happy to discuss new ideas and opportunities.'
+        },
+        footer: {
+            message: 'Designed and developed with curiosity.',
+            backToTop: 'Back to top',
+            credit: 'Frontend Developer Portfolio'
+        },
         sections: {
             about: 'About',
             stack: 'Tech Stack',
@@ -255,6 +288,39 @@ export const portfolioContent = {
                 }
             ],
             disclaimer: 'Описание проектов обобщено в связи с конфиденциальностью.'
+        },
+        contacts: {
+            index: '05 / КОНТАКТЫ',
+            title: 'Давайте создадим что-нибудь интересное.',
+            description:
+                'Есть интересный проект, сложная техническая задача или предложение о сотрудничестве? Буду рада обсудить.',
+            availability: 'Открыта к предложениям по frontend-разработке',
+            links: [
+                {
+                    label: 'GitHub',
+                    value: 'github.com/BMilkey',
+                    href: 'https://github.com/BMilkey',
+                    external: true
+                },
+                {
+                    label: 'Telegram',
+                    value: '@bmilkey',
+                    href: 'https://t.me/bmilkey',
+                    external: true
+                },
+                {
+                    label: 'Email',
+                    value: 'sochioneface@gmail.com',
+                    href: 'mailto:sochioneface@gmail.com',
+                    external: false
+                }
+            ],
+            note: 'Буду рада обсудить новые идеи и возможности.'
+        },
+        footer: {
+            message: 'Создано с любопытством к технологиям.',
+            backToTop: 'Наверх',
+            credit: 'Портфолио frontend-разработчика'
         },
         sections: {
             about: 'Обо мне',

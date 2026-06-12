@@ -1018,6 +1018,146 @@ main {
     }
 }
 
+.contacts {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: clamp(2rem, 7vw, 7rem);
+    align-items: end;
+    padding-top: var(--spacing-24);
+    padding-bottom: var(--spacing-24);
+    border-top: 1px solid var(--color-border);
+
+    &__main {
+        max-width: 650px;
+    }
+
+    &__heading {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: var(--spacing-4);
+    }
+
+    &__index {
+        color: var(--color-accent-strong);
+        font-family: var(--font-family-mono);
+        font-size: var(--font-size-xs);
+        letter-spacing: 0.08em;
+    }
+
+    &__availability {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.45rem 0.75rem;
+        border: 1px solid var(--color-border-strong);
+        border-radius: var(--radius-pill);
+        color: var(--color-text-secondary);
+        font-size: var(--font-size-xs);
+
+        span {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: #79a88a;
+            box-shadow: 0 0 0 3px rgb(121 168 138 / 12%);
+        }
+    }
+
+    h2 {
+        position: relative;
+        max-width: 620px;
+        margin: var(--spacing-8) 0 var(--spacing-6);
+        font-size: clamp(2.5rem, 5.5vw, 5rem);
+        font-weight: 600;
+        line-height: 1.05;
+        letter-spacing: -0.065em;
+    }
+
+    &__decoration {
+        display: inline-block;
+        margin-left: 0.15em;
+        color: var(--color-accent);
+        font-size: 0.55em;
+        vertical-align: top;
+    }
+
+    &__description {
+        max-width: 480px;
+        color: var(--color-text-secondary);
+        font-size: var(--font-size-lg);
+        line-height: 1.75;
+    }
+
+    &__note {
+        display: flex;
+        align-items: center;
+        gap: var(--spacing-3);
+        margin-top: var(--spacing-8);
+        color: var(--color-text-muted);
+        font-family: var(--font-family-mono);
+        font-size: var(--font-size-xs);
+
+        span {
+            color: var(--color-accent-strong);
+            font-size: var(--font-size-lg);
+        }
+    }
+
+    &__links {
+        display: flex;
+        flex-direction: column;
+        border-top: 1px solid var(--color-border-strong);
+    }
+
+    &__link {
+        display: grid;
+        grid-template-columns: 70px minmax(0, 1fr) 20px;
+        align-items: center;
+        gap: var(--spacing-3);
+        padding: var(--spacing-6) 0;
+        border-bottom: 1px solid var(--color-border-strong);
+        color: var(--color-text-primary);
+        text-decoration: none;
+        transition:
+            color var(--transition-fast),
+            padding var(--transition-base);
+
+        &:hover {
+            padding-right: var(--spacing-2);
+            padding-left: var(--spacing-2);
+            color: var(--color-accent-strong);
+
+            .contacts__link-arrow {
+                transform: translate(3px, -3px);
+            }
+        }
+
+        &:focus-visible {
+            outline: 2px solid var(--color-accent-strong);
+            outline-offset: 4px;
+        }
+    }
+
+    &__link-label {
+        color: var(--color-text-muted);
+        font-family: var(--font-family-mono);
+        font-size: var(--font-size-xs);
+    }
+
+    &__link-value {
+        min-width: 0;
+        overflow-wrap: anywhere;
+        font-size: var(--font-size-sm);
+        font-weight: 500;
+    }
+
+    &__link-arrow {
+        color: var(--color-accent);
+        transition: transform var(--transition-fast);
+    }
+}
+
 @keyframes stream-rotate {
     to {
         transform: rotate(360deg);
@@ -1025,13 +1165,74 @@ main {
 }
 
 .footer {
-    padding-block: var(--spacing-24);
+    padding: var(--spacing-8) 0 var(--spacing-6);
     border-top: 1px solid var(--color-border);
 
-    h2 {
-        margin: 0;
-        font-size: var(--font-size-3xl);
-        letter-spacing: -0.06em;
+    &__main {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: center;
+        gap: var(--spacing-6);
+        padding-bottom: var(--spacing-8);
+    }
+
+    &__brand {
+        display: inline-flex;
+        width: fit-content;
+        align-items: center;
+        gap: 0.5rem;
+        color: var(--color-text-primary);
+        font-size: 1.4rem;
+        font-weight: 700;
+        text-decoration: none;
+
+        span:first-child {
+            color: var(--color-accent);
+        }
+    }
+
+    &__message {
+        color: var(--color-text-muted);
+        font-size: var(--font-size-xs);
+        text-align: center;
+    }
+
+    &__top {
+        display: inline-flex;
+        align-items: center;
+        justify-self: end;
+        gap: var(--spacing-2);
+        color: var(--color-text-secondary);
+        font-family: var(--font-family-mono);
+        font-size: var(--font-size-xs);
+        text-decoration: none;
+        transition: color var(--transition-fast);
+
+        &:hover {
+            color: var(--color-accent-strong);
+        }
+
+        &:focus-visible {
+            outline: 2px solid var(--color-accent-strong);
+            outline-offset: 4px;
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+        gap: var(--spacing-4);
+        padding-top: var(--spacing-4);
+        border-top: 1px solid var(--color-border);
+        color: var(--color-text-muted);
+        font-family: var(--font-family-mono);
+        font-size: 0.65rem;
+    }
+
+    &__location {
+        span {
+            color: var(--color-accent);
+        }
     }
 }
 
@@ -1099,6 +1300,23 @@ main {
         &__visual {
             position: relative;
             top: auto;
+        }
+    }
+
+    .contacts {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-12);
+    }
+
+    .footer {
+        &__main {
+            grid-template-columns: 1fr auto;
+        }
+
+        &__message {
+            grid-column: 1 / -1;
+            grid-row: 2;
+            text-align: left;
         }
     }
 }
@@ -1302,6 +1520,30 @@ main {
 
         &__disclaimer {
             text-align: left;
+        }
+    }
+
+    .contacts {
+        padding-top: var(--spacing-16);
+        padding-bottom: var(--spacing-16);
+
+        h2 {
+            font-size: clamp(2.5rem, 12vw, 3.5rem);
+        }
+
+        &__link {
+            grid-template-columns: 55px minmax(0, 1fr) 16px;
+            gap: var(--spacing-2);
+        }
+    }
+
+    .footer {
+        &__bottom {
+            flex-wrap: wrap;
+        }
+
+        &__location {
+            width: 100%;
         }
     }
 }
