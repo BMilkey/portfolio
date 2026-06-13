@@ -45,13 +45,13 @@
                     {/each}
                 </ul>
 
-                <span class="stack__group-mark" aria-hidden="true">↗️</span>
+                <span class="stack__group-mark" aria-hidden="true">↗</span>
             </article>
         {/each}
     </section>
 
     <p class="stack__note">
-        <span aria-hidden="true">✳️</span>
+        <span aria-hidden="true">✳</span>
         {content.note}
     </p>
 </section>

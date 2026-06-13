@@ -31,7 +31,7 @@
 
         <h2 id="contacts-title">
             {content.title}
-            <span class="contacts__decoration" aria-hidden="true">✳️</span>
+            <span class="contacts__decoration" aria-hidden="true">✳</span>
         </h2>
 
         <p class="contacts__description">{content.description}</p>
@@ -52,7 +52,7 @@
             >
                 <span class="contacts__link-label">{link.label}</span>
                 <span class="contacts__link-value">{link.value}</span>
-                <span class="contacts__link-arrow" aria-hidden="true">↗️</span>
+                <span class="contacts__link-arrow" aria-hidden="true">↗</span>
             </a>
         {/each}
     </section>

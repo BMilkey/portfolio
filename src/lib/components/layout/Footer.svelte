@@ -13,7 +13,7 @@
 <footer class="footer">
     <section class="footer__main">
         <a class="footer__brand" href="#top" aria-label="Back to top">
-            <span aria-hidden="true">✳️</span>
+            <span aria-hidden="true">✳</span>
             <span>BM.</span>
         </a>
 
@@ -33,7 +33,7 @@
         <span>{content.credit}</span>
 
         <span class="footer__location">
-            MADE WITH CURIOSITY <span aria-hidden="true">✳️</span>
+            MADE WITH CURIOSITY <span aria-hidden="true">✳</span>
         </span>
     </section>
 </footer>

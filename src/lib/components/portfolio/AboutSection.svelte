@@ -20,7 +20,7 @@
             {content.title}
         </h2>
 
-        <span class="about__decoration" aria-hidden="true">✳️</span>
+        <span class="about__decoration" aria-hidden="true">✳</span>
     </section>
 
     <section class="about__body">

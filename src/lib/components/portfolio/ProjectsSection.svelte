@@ -55,8 +55,12 @@
                             </section>
 
                             <section class="projects__stream-display" aria-hidden="true">
-                                <div class="projectsstream-orbit projectsstream-orbit--outer"></div>
-                                <div class="projectsstream-orbit projectsstream-orbit--inner"></div>
+                                <div
+                                    class="projects__stream-orbit projects__stream-orbit--outer"
+                                ></div>
+                                <div
+                                    class="projects__stream-orbit projects__stream-orbit--inner"
+                                ></div>
 
                                 <section class="projects__stream-core">
                                     <span>STREAMS</span>
@@ -64,11 +68,13 @@
                                     <span>ONE SERVER</span>
                                 </section>
 
-                                <span class="projectsstream-point projectsstream-point--one"></span>
-                                <span class="projectsstream-point projectsstream-point--two"></span>
-                                <span class="projectsstream-point projectsstream-point--three"
+                                <span class="projects__stream-point projects__stream-point--one"
                                 ></span>
-                                <span class="projectsstream-point projectsstream-point--four"
+                                <span class="projects__stream-point projects__stream-point--two"
+                                ></span>
+                                <span class="projects__stream-point projects__stream-point--three"
+                                ></span>
+                                <span class="projects__stream-point projects__stream-point--four"
                                 ></span>
                             </section>
 
@@ -94,7 +100,7 @@
                                 </section>
                                 <span class="projects__operation-connector"></span>
                                 <section
-                                    class="projectsoperation-node projectsoperation-node--active"
+                                    class="projects__operation-node projects__operation-node--active"
                                 >
                                     <span>02</span>
                                     <strong>Response</strong>
@@ -165,7 +171,7 @@
                     </section>
 
                     <p class="projects__note">
-                        <span aria-hidden="true">✳️</span>
+                        <span aria-hidden="true">✳</span>
                         {project.note}
                     </p>
                 </section>

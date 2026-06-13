@@ -1,111 +1,111 @@
 .header {
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  align-items: center;
-  min-height: 88px;
-  border-bottom: 1px solid var(--color-border);
-
-  &__logo {
-    display: inline-flex;
-    align-items: center;
-    gap: var(--spacing-3);
-    width: fit-content;
-  }
-
-  &__logo-mark {
     display: grid;
-    place-items: center;
-    width: 38px;
-    height: 38px;
-    border-radius: 50%;
-    background: var(--color-accent);
-    color: #fff;
-    font-size: 1.35rem;
-    font-weight: 700;
-    letter-spacing: -0.08em;
-  }
-
-  &__logo-label {
-    color: var(--color-text-secondary);
-    font-family: var(--font-family-mono);
-    font-size: 0.625rem;
-    letter-spacing: 0.06em;
-  }
-
-  &__navigation {
-    display: flex;
+    grid-template-columns: 1fr auto 1fr;
     align-items: center;
-    gap: var(--spacing-6);
+    min-height: 88px;
+    border-bottom: 1px solid var(--color-border);
 
-    a {
-      color: var(--color-text-secondary);
-      font-size: var(--font-size-sm);
-      transition: color var(--transition-fast);
-
-      &:hover {
-        color: var(--color-accent-strong);
-      }
+    &__logo {
+        display: inline-flex;
+        align-items: center;
+        gap: var(--spacing-3);
+        width: fit-content;
     }
-  }
 
-  &__language {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: var(--spacing-2);
-    color: var(--color-text-muted);
-    font-family: var(--font-family-mono);
-    font-size: var(--font-size-xs);
-
-    button {
-      padding: var(--spacing-2);
-      border: 0;
-      background: transparent;
-      color: var(--color-text-muted);
-      font-family: inherit;
-      font-size: inherit;
-      transition: color var(--transition-fast);
-
-      &[aria-pressed='true'] {
-        color: var(--color-accent-strong);
-        font-weight: 600;
-      }
-
-      &:hover {
-        color: var(--color-text-primary);
-      }
+    &__logo-mark {
+        display: grid;
+        place-items: center;
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        background: var(--color-accent);
+        color: #fff;
+        font-size: 1.35rem;
+        font-weight: 700;
+        letter-spacing: -0.08em;
     }
-  }
+
+    &__logo-label {
+        color: var(--color-text-secondary);
+        font-family: var(--font-family-mono);
+        font-size: 0.625rem;
+        letter-spacing: 0.06em;
+    }
+
+    &__navigation {
+        display: flex;
+        align-items: center;
+        gap: var(--spacing-6);
+
+        a {
+            color: var(--color-text-secondary);
+            font-size: var(--font-size-sm);
+            transition: color var(--transition-fast);
+
+            &:hover {
+                color: var(--color-accent-strong);
+            }
+        }
+    }
+
+    &__language {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: var(--spacing-2);
+        color: var(--color-text-muted);
+        font-family: var(--font-family-mono);
+        font-size: var(--font-size-xs);
+
+        button {
+            padding: var(--spacing-2);
+            border: 0;
+            background: transparent;
+            color: var(--color-text-muted);
+            font-family: inherit;
+            font-size: inherit;
+            transition: color var(--transition-fast);
+
+            &[aria-pressed='true'] {
+                color: var(--color-accent-strong);
+                font-weight: 600;
+            }
+
+            &:hover {
+                color: var(--color-text-primary);
+            }
+        }
+    }
 }
 
 @media (max-width: 900px) {
-  .header {
-    grid-template-columns: 1fr auto;
+    .header {
+        grid-template-columns: 1fr auto;
 
-    &__navigation {
-      grid-column: 1 / -1;
-      grid-row: 2;
-      justify-content: center;
-      padding-bottom: var(--spacing-4);
+        &__navigation {
+            grid-column: 1 / -1;
+            grid-row: 2;
+            justify-content: center;
+            padding-bottom: var(--spacing-4);
+        }
     }
-  }
 }
 
 @media (max-width: 640px) {
-  .header {
-    min-height: 72px;
+    .header {
+        min-height: 72px;
 
-    &__logo-label {
-      display: none;
+        &__logo-label {
+            display: none;
+        }
+
+        &__navigation {
+            justify-content: space-between;
+            gap: var(--spacing-2);
+
+            a {
+                font-size: var(--font-size-xs);
+            }
+        }
     }
-
-    &__navigation {
-      justify-content: space-between;
-      gap: var(--spacing-2);
-
-      a {
-        font-size: var(--font-size-xs);
-      }
-    }
-  }
 }

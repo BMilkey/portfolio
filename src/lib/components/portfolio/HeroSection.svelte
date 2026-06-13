@@ -28,7 +28,7 @@
         <h1 id="hero-title">
             {content.hero.title}
             <span class="hero__title-accent">{content.hero.titleAccent}</span>
-            <span class="hero__title-sparkle" aria-hidden="true">✳️</span>
+            <span class="hero__title-sparkle" aria-hidden="true">✳</span>
         </h1>
 
         <p class="hero__description">
@@ -37,12 +37,12 @@
 
         <a class="hero__link" href="#projects">
             <span>{content.navigation.projects}</span>
-            <span aria-hidden="true">↗️</span>
+            <span aria-hidden="true">↗</span>
         </a>
     </section>
 
     <section class="hero__visual" aria-label="3D identity card preview">
-        <span class="herovisual-coordinate herovisual-coordinate--top">
+        <span class="hero__visual-coordinate hero__visual-coordinate--top">
             FIG. 001 — IDENTITY OBJECT
         </span>
 
@@ -54,7 +54,7 @@
                 <span>2026 / 001</span>
             </section>
 
-            <div class="hero__object-symbol" aria-hidden="true">✳️</div>
+            <div class="hero__object-symbol" aria-hidden="true">✳</div>
 
             <section class="hero__object-footer">
                 <span>CREATIVE MIND</span>
@@ -62,7 +62,7 @@
             </section>
         </section>
 
-        <span class="herovisual-coordinate herovisual-coordinate--bottom">
+        <span class="hero__visual-coordinate hero__visual-coordinate--bottom">
             55° / 37° — DIGITAL SPACE
         </span>
 
